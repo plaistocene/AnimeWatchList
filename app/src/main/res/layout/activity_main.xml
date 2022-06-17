@@ -4,28 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF313131"
+    android:background="@color/background"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/application_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_horizontal"
+        android:layout_marginTop="@dimen/margin_vertical"
+        android:layout_weight="1"
+        android:background="@color/purple_500"
+        android:gravity="center"
+        android:text="Anime WatchList"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <fragment
         android:id="@+id/frgMainActivity"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="10dp"
+        android:layout_marginVertical="@dimen/margin_vertical"
+        android:layout_marginTop="587dp"
+        android:layout_marginHorizontal="@dimen/margin_horizontal"
         app:layout_constraintBottom_toTopOf="@+id/btnSearch"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.263"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/application_logo"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btnSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
+        android:layout_marginHorizontal="@dimen/margin_horizontal"
+        android:layout_marginBottom="@dimen/margin_vertical"
         android:text="Search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnMyList"
@@ -36,72 +54,11 @@
         android:id="@+id/btnMyList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
+        android:layout_marginHorizontal="@dimen/margin_horizontal"
+        android:layout_marginBottom="@dimen/margin_vertical"
         android:text="My List"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnSearch" />
-
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/application_logo"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_weight="1"-->
-    <!--        android:text="Anime WatchList"-->
-    <!--        android:textSize="50sp"-->
-    <!--        android:background="@color/purple_500"-->
-    <!--        android:textColor="@color/white"-->
-    <!--        android:gravity="center"-->
-    <!--        android:layout_marginTop="30dp"-->
-    <!--        android:layout_marginHorizontal="15dp" />-->
-
-    <!--    <EditText-->
-    <!--        android:id="@+id/anime_search_edit_text"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_weight="0.2"-->
-    <!--        android:autofillHints="Search Anime"-->
-    <!--        android:hint="Search Anime"-->
-    <!--        android:textColorHint="@color/white"-->
-    <!--        android:textColor="@color/white"-->
-    <!--        android:textSize="40sp"-->
-    <!--        android:layout_marginTop="100dp"-->
-    <!--        android:layout_marginHorizontal="15dp"-->
-    <!--        />-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/search_anime_button"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_weight="1"-->
-    <!--        android:layout_marginBottom="50dp"-->
-    <!--        android:text="Search"-->
-    <!--        android:textSize="40sp"-->
-    <!--        android:layout_marginTop="30dp"-->
-    <!--        android:layout_marginHorizontal="15dp"/>-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/get_all_anime_button"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_weight="1"-->
-    <!--        android:layout_marginTop="100dp"-->
-    <!--        android:layout_marginBottom="15dp"-->
-    <!--        android:text="Get All Anime"-->
-    <!--        android:textSize="32sp"-->
-    <!--        android:layout_marginHorizontal="15dp"/>-->
-
-    <!--    <Button-->
-    <!--        android:id="@+id/show_my_list_button"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_weight="1"-->
-    <!--        android:text="Show My List"-->
-    <!--        android:textSize="32sp"-->
-    <!--        android:layout_marginHorizontal="15dp"-->
-    <!--        android:layout_marginBottom="30dp"/>-->
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
