@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.plaistocene.animewatchlist.Model.Result;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder>
@@ -33,9 +34,14 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder>
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position)
     {
-        holder.movie_poster_image_view.setImageURI(Uri.parse("results[position].getImage()"));
         holder.movie_title_text_view.setText(results[position].getTitle());
         holder.movie_description_text_view.setText(results[position].getDescription());
+        Glide.with(holder.movie_poster_image_view)
+                .load(results[position].getImage())
+                .override(200, 300)
+                .placeholder(R.drawable.image_placeholder)
+                .error(R.drawable.image_error)
+                .into(holder.movie_poster_image_view);
     }
 
     @Override
